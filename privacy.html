@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - YouTube Fullscreen Focus</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", sans-serif;
+        line-height: 1.8;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 40px;
+        text-align: center;
+        color: white;
+      }
+
+      .header h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      .header .date {
+        opacity: 0.9;
+        font-size: 14px;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      .toc {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .toc h2 {
+        color: #667eea;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      .toc ul {
+        list-style: none;
+      }
+
+      .toc li {
+        margin-bottom: 8px;
+      }
+
+      .toc a {
+        color: #555;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .toc a:hover {
+        color: #667eea;
+      }
+
+      .section {
+        margin-bottom: 35px;
+        scroll-margin-top: 20px;
+      }
+
+      .section h2 {
+        color: #667eea;
+        font-size: 22px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #f0f0f0;
+      }
+
+      .section h3 {
+        color: #444;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .highlight {
+        background: #fff9e6;
+        padding: 15px;
+        border-left: 4px solid #ffc107;
+        border-radius: 4px;
+        margin: 20px 0;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      .data-table th {
+        background: #f8f9fa;
+        padding: 12px;
+        text-align: left;
+        font-weight: 600;
+        color: #667eea;
+      }
+
+      .data-table td {
+        padding: 12px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 4px 12px;
+        background: #28a745;
+        color: white;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .badge.no {
+        background: #dc3545;
+      }
+
+      ul {
+        margin: 15px 0;
+        padding-left: 25px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .contact-box {
+        background: linear-gradient(135deg, #f8f9fa, #f0f2f5);
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .contact-box h3 {
+        color: #667eea;
+        margin-bottom: 10px;
+      }
+
+      .contact-box a {
+        color: #667eea;
+        font-weight: 500;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 30px;
+        color: white;
+      }
+
+      .footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      .coppa-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #28a745;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: 500;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <h1>🔒 Privacy Policy</h1>
+          <div class="date">Last Updated: January 2025</div>
+        </div>
+
+        <div class="content">
+          <div class="toc">
+            <h2>📋 Table of Contents</h2>
+            <ul>
+              <li>• <a href="#overview">Privacy Overview</a></li>
+              <li>• <a href="#data">Data Collection</a></li>
+              <li>• <a href="#permissions">Permissions Explained</a></li>
+              <li>• <a href="#storage">Local Storage</a></li>
+              <li>• <a href="#children">Children's Privacy (COPPA)</a></li>
+              <li>• <a href="#third-party">Third-Party Services</a></li>
+              <li>• <a href="#security">Security</a></li>
+              <li>• <a href="#changes">Policy Changes</a></li>
+              <li>• <a href="#contact">Contact Information</a></li>
+            </ul>
+          </div>
+
+          <div class="highlight">
+            <strong>🎉 Good News!</strong> YouTube Fullscreen Focus does NOT
+            collect, store, or transmit any personal data whatsoever. Your
+            privacy is completely protected.
+          </div>
+
+          <div class="section" id="overview">
+            <h2>Privacy Overview</h2>
+            <p>
+              YouTube Fullscreen Focus is designed with privacy as a fundamental
+              principle. We believe in complete transparency about how our
+              extension works and what information it accesses.
+            </p>
+
+            <table class="data-table">
+              <tr>
+                <th>Privacy Feature</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>Personal data collection</td>
+                <td><span class="badge no">NONE</span></td>
+              </tr>
+              <tr>
+                <td>Analytics or tracking</td>
+                <td><span class="badge no">NONE</span></td>
+              </tr>
+              <tr>
+                <td>Cookies</td>
+                <td><span class="badge no">NONE</span></td>
+              </tr>
+              <tr>
+                <td>External servers</td>
+                <td><span class="badge no">NO CONNECTION</span></td>
+              </tr>
+              <tr>
+                <td>Ads</td>
+                <td><span class="badge no">NO ADS</span></td>
+              </tr>
+              <tr>
+                <td>User accounts</td>
+                <td><span class="badge no">NOT REQUIRED</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="section" id="data">
+            <h2>Data Collection</h2>
+            <h3>What we DON'T collect:</h3>
+            <ul>
+              <li>❌ Your browsing history</li>
+              <li>❌ Videos you watch</li>
+              <li>❌ Keystrokes or typing patterns</li>
+              <li>❌ Personal information</li>
+              <li>❌ IP addresses</li>
+              <li>❌ Device information</li>
+              <li>❌ Usage statistics</li>
+              <li>❌ Any form of identifier</li>
+            </ul>
+
+            <h3>Why we don't need your data:</h3>
+            <p>
+              The extension works entirely within your browser using local
+              processing. It simply detects when YouTube is in fullscreen mode
+              and blocks keyboard input. No data needs to leave your device for
+              this to work.
+            </p>
+          </div>
+
+          <div class="section" id="permissions">
+            <h2>Permissions Explained</h2>
+            <p>
+              Our extension requests only the minimum permissions necessary to
+              function:
+            </p>
+
+            <table class="data-table">
+              <tr>
+                <th>Permission</th>
+                <th>Why It's Needed</th>
+                <th>What It Does NOT Do</th>
+              </tr>
+              <tr>
+                <td><strong>activeTab</strong></td>
+                <td>To detect when YouTube enters fullscreen mode</td>
+                <td>Cannot access other tabs or your browsing history</td>
+              </tr>
+              <tr>
+                <td><strong>storage</strong></td>
+                <td>
+                  To save your preferences (enabled/disabled, allowed keys)
+                </td>
+                <td>Only stores settings locally, never sends data anywhere</td>
+              </tr>
+              <tr>
+                <td><strong>youtube.com</strong></td>
+                <td>To run only on YouTube pages</td>
+                <td>Cannot access any other websites</td>
+              </tr>
+              <tr>
+                <td><strong>youtubekids.com</strong></td>
+                <td>To support YouTube Kids platform</td>
+                <td>Cannot access any other websites</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="section" id="storage">
+            <h2>Local Storage</h2>
+            <p>
+              The extension stores only the following information locally on
+              your device:
+            </p>
+            <ul>
+              <li>✅ Extension enabled/disabled state</li>
+              <li>✅ Notification preferences</li>
+              <li>✅ List of allowed keys in fullscreen</li>
+              <li>✅ Installation date (for welcome message)</li>
+            </ul>
+            <p>
+              <strong>Important:</strong> All data is stored using Chrome's sync
+              storage API, which means it syncs across your devices if you're
+              signed into Chrome. This data never leaves Google's secure sync
+              system.
+            </p>
+          </div>
+
+          <div class="section" id="children">
+            <h2>Children's Privacy (COPPA Compliance)</h2>
+            <div class="coppa-badge">✅ COPPA Compliant</div>
+
+            <p>
+              YouTube Fullscreen Focus is specifically designed with children's
+              privacy in mind:
+            </p>
+            <ul>
+              <li>
+                We do not collect personal information from anyone, including
+                children under 13
+              </li>
+              <li>We do not require account creation or sign-ups</li>
+              <li>We do not use cookies or tracking technologies</li>
+              <li>We do not display advertisements</li>
+              <li>We do not have social media integrations</li>
+              <li>
+                The extension works identically for all users regardless of age
+              </li>
+            </ul>
+
+            <p>
+              <strong>For Parents:</strong> This extension is completely safe
+              for your children to use. It does not collect, store, or share any
+              information about your child's YouTube viewing habits.
+            </p>
+          </div>
+
+          <div class="section" id="third-party">
+            <h2>Third-Party Services</h2>
+            <p>
+              YouTube Fullscreen Focus does not integrate with or send data to
+              any third-party services. The only external link is an optional
+              "Buy Me a Coffee" donation button, which:
+            </p>
+            <ul>
+              <li>Opens in a new tab</li>
+              <li>Is completely optional</li>
+              <li>Does not share any data from the extension</li>
+              <li>Is handled entirely by BuyMeACoffee's platform</li>
+            </ul>
+          </div>
+
+          <div class="section" id="security">
+            <h2>Security</h2>
+            <p>We take security seriously:</p>
+            <ul>
+              <li>
+                🔐 The extension is regularly updated to maintain compatibility
+                and security
+              </li>
+              <li>
+                🔐 All code is open-source and available for review on GitHub
+              </li>
+              <li>🔐 We follow Chrome Web Store's security guidelines</li>
+              <li>🔐 No external connections means no risk of data breaches</li>
+              <li>
+                🔐 The extension cannot access sensitive browser areas like
+                passwords or payment methods
+              </li>
+            </ul>
+          </div>
+
+          <div class="section" id="changes">
+            <h2>Changes to This Policy</h2>
+            <p>If we make changes to this privacy policy, we will:</p>
+            <ul>
+              <li>Update the "Last Updated" date at the top</li>
+              <li>Notify users through the extension update notes</li>
+              <li>
+                Never reduce your privacy protections without clear notice
+              </li>
+            </ul>
+            <p>Our commitment to zero data collection will never change.</p>
+          </div>
+
+          <div class="section" id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-box">
+              <h3>Have Privacy Questions?</h3>
+              <p>We're here to help! Contact us at:</p>
+              <p>
+                📧 Email:
+                <a href="mailto:privacy@youtubefocus.com"
+                  >privacy@youtubefocus.com</a
+                >
+              </p>
+              <p>
+                🐦 Twitter:
+                <a href="https://twitter.com/youtubefocus" target="_blank"
+                  >@youtubefocus</a
+                >
+              </p>
+              <p>
+                📝 GitHub:
+                <a
+                  href="https://github.com/yourusername/youtube-fullscreen-focus/issues"
+                  target="_blank"
+                  >Open an Issue</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="highlight"
+            style="background: #d4edda; border-left-color: #28a745"
+          >
+            <strong>✅ Your Privacy is Protected!</strong><br />
+            You can use YouTube Fullscreen Focus with complete confidence that
+            your privacy is respected and protected. We don't want your data -
+            we just want to help you enjoy uninterrupted video viewing!
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>© 2025 YouTube Fullscreen Focus. All rights reserved.</p>
+        <p style="margin-top: 10px">
+          <a href="welcome.html">Home</a>
+          <a href="https://chrome.google.com/webstore">Chrome Web Store</a>
+          <a href="https://github.com/yourusername/youtube-fullscreen-focus"
+            >GitHub</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
