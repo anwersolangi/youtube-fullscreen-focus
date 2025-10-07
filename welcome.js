@@ -1,45 +1,34 @@
-// JavaScript for Welcome page - FAQ functionality
 document.addEventListener("DOMContentLoaded", function () {
-  // FAQ toggle functionality
-  const faqQuestions = document.querySelectorAll(".faq-question");
+  // FAQ toggle functionality with keyboard support
+  const faqItems = document.querySelectorAll(".faq-item");
 
-  faqQuestions.forEach((question) => {
-    question.addEventListener("click", function () {
-      const item = this.parentElement;
-      const arrow = this.querySelector("span:last-child");
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+    const arrow = question.querySelector("span:last-child");
 
-      // Toggle active state
+    const toggleFAQ = () => {
+      const isActive = item.classList.contains("active");
       item.classList.toggle("active");
-
-      // Update arrow direction
       arrow.textContent = item.classList.contains("active") ? "▲" : "▼";
+      item.setAttribute("aria-expanded", !isActive);
 
-      // Close other FAQ items (optional - for accordion behavior)
-      faqQuestions.forEach((otherQuestion) => {
-        if (otherQuestion !== this) {
-          const otherItem = otherQuestion.parentElement;
+      // Close other FAQ items for accordion behavior
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          const otherQuestion = otherItem.querySelector(".faq-question");
           const otherArrow = otherQuestion.querySelector("span:last-child");
           otherItem.classList.remove("active");
           otherArrow.textContent = "▼";
+          otherItem.setAttribute("aria-expanded", "false");
         }
       });
-    });
-  });
+    };
 
-  // Smooth scroll for table of contents links
-  const tocLinks = document.querySelectorAll(".toc a");
-
-  tocLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+    question.addEventListener("click", toggleFAQ);
+    question.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleFAQ();
       }
     });
   });
@@ -47,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add animation to feature cards on scroll
   const observerOptions = {
     threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
+    rootMargin: "0px 0px -100px 0px",
   };
 
   const observer = new IntersectionObserver(function (entries) {
@@ -55,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting) {
         entry.target.style.opacity = "1";
         entry.target.style.transform = "translateY(0)";
+        observer.unobserve(entry.target); // Stop observing once animated
       }
     });
   }, observerOptions);
@@ -62,9 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Observe feature cards
   const features = document.querySelectorAll(".feature");
   features.forEach((feature, index) => {
-    feature.style.opacity = "0";
-    feature.style.transform = "translateY(20px)";
-    feature.style.transition = `all 0.5s ease ${index * 0.1}s`;
+    feature.style.transition = `all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${
+      index * 0.15
+    }s`;
     observer.observe(feature);
   });
 });
